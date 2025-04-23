@@ -1,10 +1,24 @@
 package com.aithinkers.bootcamp.rest;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BootCampRestComtroller {
+	
+	//Inject properties
+	@Value("${company.name}")
+	private String name;
+	
+	@Value("${company.domain}")
+	private String domain;
+	
+	@GetMapping("/companyDetails")
+	public String getAuthorInfo()
+	{
+		return "Company name:-"+name +" "+"Company Domain:-"+domain;
+	}
 	
 	@GetMapping("/")
 	public String getInformation()
