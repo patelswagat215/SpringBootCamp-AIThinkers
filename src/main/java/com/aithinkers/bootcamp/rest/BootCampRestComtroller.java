@@ -1,11 +1,34 @@
 package com.aithinkers.bootcamp.rest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.aithinkers.bootcamp.ci.demo.Employee;
+
 @RestController
 public class BootCampRestComtroller {
+	
+	//Demonstration for Constructor injection
+	private Employee employee;
+	
+	@Autowired
+	public BootCampRestComtroller(Employee employee)
+	{
+		this.employee=employee;
+	}
+	
+	@GetMapping("/getEmpDtls")
+	public String getEmployeeDetails()
+	{
+		return employee.getEmployeeDetails();
+		
+	}
+	
+	
+	
+	
 	
 	//Inject properties
 	@Value("${company.name}")
