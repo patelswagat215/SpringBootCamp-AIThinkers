@@ -11,12 +11,12 @@ import com.aithinkers.bootcamp.ci.demo.Employee;
 public class BootCampRestComtroller {
 	
 	//Demonstration for Constructor injection
-	private Employee employee;
+	private Employee employeeimpl;
 	
 	@Autowired
 	public BootCampRestComtroller(Employee employee)
 	{
-		this.employee=employee;
+		this.employeeimpl=employee;
 	}
 	
 	@GetMapping("/getEmpDtls")
