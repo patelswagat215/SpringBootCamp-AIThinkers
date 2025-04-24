@@ -1,4 +1,4 @@
-package com.aithinkers.bootcamp.ci.demo;
+package com.aithinkers.bootcamp.utils;
 
 public interface Employee {
 	
