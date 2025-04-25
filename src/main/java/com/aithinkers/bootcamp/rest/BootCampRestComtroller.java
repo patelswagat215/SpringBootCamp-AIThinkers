@@ -12,8 +12,8 @@ import com.aithinkers.bootcamp.utils.Employee;
 public class BootCampRestComtroller {
 	
 	//Demonstrating field Injection
-	@Autowired
 	//@Qualifier("pythonEmployeeImpl") //Demonstrating @Qualifier
+	@Autowired
 	private Employee employeeimpl;
 	
 	/*
@@ -39,6 +39,7 @@ public class BootCampRestComtroller {
 		return employeeimpl.getEmployeeDetails();
 		
 	}
+	
 	
 	//Inject properties
 	@Value("${company.name}")

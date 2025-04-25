@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Lazy
-public class DonNetEmployeeImpl  implements Employee{
+public class DotNetEmployeeImpl  implements Employee{
 
 	@Override
 	public String getEmployeeDetails() {
